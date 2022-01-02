@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+type FaceSnapButtonTextType = 'Oh Snap!' | 'Oops, unSnap!';
+
 @Component({
   selector: 'app-face-snap',
   templateUrl: './face-snap.component.html',
@@ -11,6 +13,7 @@ export class FaceSnapComponent implements OnInit {
   createdDate!: Date;
   snaps!: number;
   imageUrl!: string;
+  buttonText!: FaceSnapButtonTextType;
 
   constructor() {}
 
@@ -21,5 +24,16 @@ export class FaceSnapComponent implements OnInit {
     this.snaps = 6;
     this.imageUrl =
       'https://media.senscritique.com/media/000006424972/1200/Ted.jpg';
+    this.buttonText = 'Oh Snap!';
+  }
+
+  onSnap() {
+    if (this.buttonText === 'Oh Snap!') {
+      this.snaps++;
+      this.buttonText = 'Oops, unSnap!';
+    } else {
+      this.snaps--;
+      this.buttonText = 'Oh Snap!';
+    }
   }
 }
