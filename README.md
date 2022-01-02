@@ -1,5 +1,7 @@
 # OcAngularSnapfaceWebApp
 
+This is a photo sharing application created while learning the basics of the Angular framework on OpenClassroom.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
