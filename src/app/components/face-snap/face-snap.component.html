@@ -15,4 +15,5 @@
     {{ faceSnap.description }}
   </p>
   <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
+  <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
 </article>
