@@ -1,14 +1,18 @@
 <article class="face-snap">
   <h2>
-    {{ title }}
+    {{ faceSnap.title }}
   </h2>
-  <img class="face-snap-picture" [src]="imageUrl" [alt]="title" />
+  <img
+    class="face-snap-picture"
+    [src]="faceSnap.imageUrl"
+    [alt]="faceSnap.title"
+  />
   <p>
     <button (click)="onSnap()">{{ buttonText }}</button>
-    🤌 {{ snaps }}
+    🤌 {{ faceSnap.snaps }}
   </p>
   <p>
-    {{ description }}
+    {{ faceSnap.description }}
   </p>
-  <p>Mis en ligne le {{ createdDate }}</p>
+  <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
 </article>
