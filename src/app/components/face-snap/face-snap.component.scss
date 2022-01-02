@@ -1,6 +1,23 @@
 .face-snap {
+  padding: 0.5rem 2rem;
   width: 35%;
   margin: 0 auto;
+
+  &.snapped {
+    background-color: rgba(lightgreen, 0.4);
+    color: darkgreen;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 13px -7px rgba(0, 0, 0, 0.2),
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+    button {
+      box-shadow: lightgreen 3px 3px 7px;
+      color: darkgreen;
+      &:active {
+        box-shadow: lightgreen 0 0 5px;
+      }
+    }
+  }
 
   &-picture {
     display: block;
