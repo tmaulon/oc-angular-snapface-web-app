@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
         'Ted est une peluche plutôt funky!!',
         'https://media.senscritique.com/media/000006424972/1200/Ted.jpg',
         new Date(),
-        0,
+        250,
         'Paris'
       ),
       new FaceSnap(
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
 
         'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
         new Date(),
-        0
+        50
       ),
       new FaceSnap(
         'Three Rock Mountain',
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
         "Mmmh que c'est bon !",
         'https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg',
         new Date(),
-        0,
+        150,
         'Bordeaux'
       ),
     ];
