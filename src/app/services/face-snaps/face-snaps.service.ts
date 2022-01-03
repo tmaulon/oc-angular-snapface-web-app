@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { FaceSnap } from './../../models/face-snap/face-snap.model';
 
+type SnapType = 'snap' | 'unsnap';
+
 @Injectable({
   providedIn: 'root',
 })
 export class FaceSnapsService {
   faceSnaps: FaceSnap[] = [
     new FaceSnap(
+      1,
       'Ted',
       'Ted est une peluche plutôt funky!!',
       'https://media.senscritique.com/media/000006424972/1200/Ted.jpg',
@@ -15,6 +18,7 @@ export class FaceSnapsService {
       'Paris'
     ),
     new FaceSnap(
+      2,
       'Archibald',
       'Mon meilleur ami depuis tout petit !',
 
@@ -23,6 +27,7 @@ export class FaceSnapsService {
       50
     ),
     new FaceSnap(
+      3,
       'Three Rock Mountain',
       'Un endroit magnifique pour les randonnées.',
 
@@ -31,6 +36,7 @@ export class FaceSnapsService {
       0
     ),
     new FaceSnap(
+      4,
       'Un bon repas',
       "Mmmh que c'est bon !",
       'https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg',
@@ -41,4 +47,24 @@ export class FaceSnapsService {
   ];
 
   constructor() {}
+
+  getAllFaceSnaps(): FaceSnap[] {
+    return this.faceSnaps;
+  }
+
+  getFaceSnapById(faceSnapId: number): FaceSnap {
+    const faceSnap = this.faceSnaps.find(
+      (faceSnap) => faceSnap.id === faceSnapId
+    );
+    if (!faceSnap) {
+      throw new Error('FaceSnap non trouvé!');
+    } else {
+      return faceSnap;
+    }
+  }
+
+  snapFaceSnapById(faceSnapId: number, snapType: SnapType): void {
+    const snappedFaceSnap = this.getFaceSnapById(faceSnapId);
+    snapType === 'snap' ? snappedFaceSnap.snaps++ : snappedFaceSnap.snaps--;
+  }
 }
