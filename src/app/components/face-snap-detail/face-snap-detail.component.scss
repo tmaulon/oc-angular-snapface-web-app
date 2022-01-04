@@ -19,6 +19,21 @@
     }
   }
 
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &-picture {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  }
+
   button {
     background-color: transparent;
     box-sizing: border-box;
